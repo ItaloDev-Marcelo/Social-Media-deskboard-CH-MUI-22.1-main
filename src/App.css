@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+:root  {
+  --Lime-Green: hsl(163, 72%, 41%);
+--Bright-Red: hsl(356, 69%, 56%);
+--Facebook: hsl(208, 92%, 53%);
+--Twitter: hsl(203, 89%, 53%);
+/*-Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)*/
+--YouTube: hsl(348, 97%, 39%);
+--Toggle-l: linear-gradient(hsl(210, 78%, 56%) to hsl(146, 68%, 55%)) ;
+--Toggle: hsl(230, 22%, 74%);
+/*#### Dark Theme*/
+--Very-Dark-Blue-BG: hsl(230, 17%, 14%);
+--Very-Dark-Blue-T-blackop-BG-Pattern: hsl(232, 19%, 15%);
+--Dark-Desaturated-Blue-Card-BG: hsl(228, 28%, 20%);
+--Desaturated-Blue-Text: hsl(228, 34%, 66%);
+--White-Text: hsl(0, 0%, 100%);
+/*#### light Theme*/
+--White-BG: hsl(0, 0%, 100%);
+--Very-Pale-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+--Light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
+--Dark-Grayish-Blue-Text: hsl(228, 12%, 44%);
+--Very-Dark-Blue-Text: hsl(230, 17%, 14%);
+}
+
+body  {
+  font-size: 0.875em;
+  overflow-x: hidden;
+ 
+}
+
+.upAndDown {
+  color: hsl(163, 72%, 41%);
+}
+
+
+.top-cards:last-child 
+.upAndDown{
+  color: hsl(356, 69%, 56%);
+}
+
+main {
+  width: 99vw;
+
+}
+
+
+main.dark {
+  color: #fff;
+  background-color: black;
+}
+
+
+main.light {
+  color: #000;
+  background-color: #fff;
+}
+
+hr  {
+  border: 1px solid rgb(59, 59, 59);
+  opacity: .5;
+}
+
+section {
+  margin: 2em 0;
+}
+
+
+
+.top-cards {
+  width: 333px;
+  height: 225px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items : center;
+  align-content : center;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.down-cards {
+  width: 330px;
+  height: 130px;
+  border-radius: 7px;
+}
+
+
+.top-cards img {
+  align-self : center;
+}
+
+
+.down-cards:nth-of-type(1)  .card, .down-cards:nth-of-type(3) 
+ .card, .down-cards:nth-of-type(4)  .card, .down-cards:nth-of-type(5)  .card,
+ .down-cards:nth-of-type(6)  .card{
+  color: hsl(163, 72%, 41%);
+}
+
+.down-cards:nth-of-type(2)  .card, .down-cards:nth-of-type(7) 
+ .card, .down-cards:nth-of-type(8) .card {
+ color: hsl(356, 69%, 56%);
+ }
+
+
+
+
+
+
+
+
+main.light .top-cards, main.light .down-cards {
+  background-color: hsl(227, 47%, 96%) ;
+
+}
+
+
+main.dark .top-cards, main.dark .down-cards  {
+   background-color: hsl(228, 28%, 20%);
+}
+
+@media (min-width:800px) {
+  
+}
+
