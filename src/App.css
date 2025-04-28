@@ -31,7 +31,11 @@
 body  {
   font-size: 0.875em;
   overflow-x: hidden;
- 
+
+}
+
+main {
+  margin:0 auto;
 }
 
 .upAndDown {
@@ -45,7 +49,7 @@ body  {
 }
 
 main {
-  width: 99vw;
+  width: 98.7vw;
 
 }
 
@@ -124,11 +128,38 @@ main.dark .top-cards, main.dark .down-cards  {
    background-color: hsl(228, 28%, 20%);
 }
 
-@media (min-width:1200px) {
+@media (min-width:414px)  {
+  .top-cards, .down-cards {
+    width: 360px;
+  }
+}
+
+
+@media (min-width:800px)  {
   .top-container{
     display: flex;
     flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+
+  .down-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr  1fr 1fr;
+    gap: 25px;
+  }
+
+
+  .top-cards {
+    margin: 1em .5em;
+  }
+}
+
+
+@media (min-width:1200px) {
+  .top-container{
     margin-left: -1em;
+    flex-wrap: nowrap;
   }
 
   .down-container {

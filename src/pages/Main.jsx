@@ -81,8 +81,7 @@ export default function MainPage() {
                 UpData.map((item, index) => {
                    return (
                       <Stack component='article' className='top-cards'  key={index}>
-                         <Stack  sx={{display: 'flex', flexDirection: 
-                           {xs: 'column', lg: 'row'}, alignItems: 'center', 
+                         <Stack  sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', 
                            justifyContent:'space-between', padding: '1em 0 '}}>
                            <div> <img src={item.icon} width='30px' alt='social icon'/></div>
                             <Typography variant='h3' marginLeft='1em' fontSize={{xs: '1em', lg: '1.4em'}}  > {item.title}</Typography>
@@ -107,7 +106,7 @@ export default function MainPage() {
                 DownData.map((item, index) => {
                    return (
                       <Stack className='down-cards' marginY='1em' padding='1em'  component='article'   key={index}>
-                         <Stack sx={{display: 'flex', flexDirection: {xs: 'column', lg: 'row'}, justifyContent: 'space-between', alignItems:'center', marginBottom: '2.5em'}}>
+                         <Stack sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems:'center', marginBottom: '2.5em'}}>
 
                          <Typography variant='h3' fontSize='1.3em'> {item.title}</Typography>
                             <img src={item.socialIcon} width='30px' alt='social icon'/>
