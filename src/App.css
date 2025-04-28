@@ -124,7 +124,35 @@ main.dark .top-cards, main.dark .down-cards  {
    background-color: hsl(228, 28%, 20%);
 }
 
-@media (min-width:800px) {
+@media (min-width:1200px) {
+  .top-container{
+    display: flex;
+    flex-direction: row !important;
+    margin-left: -1em;
+  }
+
+  .down-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    gap: 25px;
+  }
+
+  .sub-title {
+    position: relative;
+    top: -1em;
+  }
+
+  .top-cards {
+    width: 330px;
+    height: 225px;
+    margin: 1em;
+  }
   
+  .down-cards {
+    width: 275px;
+    height: 130px;
+    border-radius: 7px;
+  }
 }
 

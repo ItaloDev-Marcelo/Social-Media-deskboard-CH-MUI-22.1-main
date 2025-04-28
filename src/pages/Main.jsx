@@ -55,7 +55,7 @@ export default function MainPage() {
     return (
         <Stack component='main'
          className={checked ? 'light' : 'dark' }
-          padding={{xs: ' 1.5em 1em', lg: '2em'}}>
+          padding={{xs: ' 1.5em 1em', lg: '2em 5em'}} margin='0 auto'>
             <Stack component='header' sx={{display: 'flex',
                 flexDirection: {xs: 'column', lg: 'row'},
                 justifyContent: {xs: 'flex-start', lg: 'space-between', margin: '1em 0 '}}}>
@@ -76,13 +76,13 @@ export default function MainPage() {
                </Stack>
                </Stack>
             </Stack>
-            <Stack component='section'>
+            <Stack component='section' className='top-container'>
                {
                 UpData.map((item, index) => {
                    return (
-                      <Stack component='article' className='top-cards' key={index}>
+                      <Stack component='article' className='top-cards'  key={index}>
                          <Stack  sx={{display: 'flex', flexDirection: 
-                           'row', alignItems: 'center', 
+                           {xs: 'column', lg: 'row'}, alignItems: 'center', 
                            justifyContent:'space-between', padding: '1em 0 '}}>
                            <div> <img src={item.icon} width='30px' alt='social icon'/></div>
                             <Typography variant='h3' marginLeft='1em' fontSize={{xs: '1em', lg: '1.4em'}}  > {item.title}</Typography>
@@ -100,13 +100,14 @@ export default function MainPage() {
                 })
                }
             </Stack>
-            <Stack component='section'>
-            <Typography variant='h3' fontSize='2em' marginY='1em'>Overview Today</Typography>
-               {
+            <Stack component='section' >
+            <Typography variant='h3' fontSize='2em'  className='sub-title' marginY='1em'>Overview Today</Typography>
+              <Stack className='down-container'>
+              {
                 DownData.map((item, index) => {
                    return (
                       <Stack className='down-cards' marginY='1em' padding='1em'  component='article'   key={index}>
-                         <Stack sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems:'center', marginBottom: '2.5em'}}>
+                         <Stack sx={{display: 'flex', flexDirection: {xs: 'column', lg: 'row'}, justifyContent: 'space-between', alignItems:'center', marginBottom: '2.5em'}}>
 
                          <Typography variant='h3' fontSize='1.3em'> {item.title}</Typography>
                             <img src={item.socialIcon} width='30px' alt='social icon'/>
@@ -122,6 +123,7 @@ export default function MainPage() {
                    )
                 })
                }
+              </Stack>
             </Stack>
 
         </Stack>
