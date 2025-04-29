@@ -87,8 +87,8 @@ export default function MainPage() {
                             <Typography variant='h3' marginLeft='1em' fontSize={{xs: '1em', lg: '1.4em'}}  > {item.title}</Typography>
                          </Stack>
                          <Stack>
-                         <Typography variant='h3' > {item.followN}</Typography>
-                            <Typography variant='p' fontSize='2em' letterSpacing='4px'> {item.subTitle}</Typography>
+                         <Typography variant='h3'   > {item.followN}</Typography>
+                            <Typography variant='p' fontSize='1em' textTransform='Uppercase' fontWeight={400} letterSpacing='4px'> {item.subTitle}</Typography>
                          </Stack>
                          <Stack className='upAndDown'>
                            
