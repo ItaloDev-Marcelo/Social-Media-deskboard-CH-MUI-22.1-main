@@ -81,18 +81,24 @@ export default function MainPage() {
                 UpData.map((item, index) => {
                    return (
                       <Stack component='article' className='top-cards'  key={index}>
-                         <Stack  sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', 
+                         <Stack  sx={{display: 'flex', flexDirection: 'row',
+                          alignItems: 'center',
+                          textAlign:  'center',
                            justifyContent:'space-between', padding: '1em 0 '}}>
                            <div> <img src={item.icon} width='30px' alt='social icon'/></div>
-                            <Typography variant='h3' marginLeft='1em' fontSize={{xs: '1em', lg: '1.4em'}}  > {item.title}</Typography>
+                            <Typography variant='h3' marginLeft='1em' fontSize={{xs: '1em', lg: '1.1em'}}  > {item.title}</Typography>
                          </Stack>
                          <Stack>
                          <Typography variant='h3'   > {item.followN}</Typography>
-                            <Typography variant='p' fontSize='1em' textTransform='Uppercase' fontWeight={400} letterSpacing='4px'> {item.subTitle}</Typography>
+                            <Typography variant='p' 
+                            fontSize='1em' textTransform='Uppercase' 
+                            fontWeight={400} letterSpacing='4px' className='subTitle' > {item.subTitle}</Typography>
                          </Stack>
                          <Stack className='upAndDown'>
                            
-                            <Typography variant='p' marginY={1} marginRight='20px'>  <img src={item.arrowIcon} width='15px' alt='arrow icon'/>  <strong>{item.upOrDown}</strong></Typography>
+                            <Typography variant='p' marginY={1} marginRight='20px' > 
+                               <img src={item.arrowIcon} width='15px' className='arrow' alt='arrow icon'/> 
+                                <strong>{item.upOrDown}</strong></Typography>
                          </Stack>
                       </Stack>
                    )

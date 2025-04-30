@@ -52,6 +52,11 @@ main {
   width: 98.7vw;
 }
 
+.subTitle  {
+  color: var(--Dark-Grayish-Blue-Text);
+}
+
+
 main.dark {
   color: #fff;
   background-color: black;
@@ -68,8 +73,19 @@ hr  {
   opacity: .5;
 }
 
+header {
+  padding: 0 1em;
+}
+
 section {
   margin: 2em 0;
+}
+
+
+.sub-title {
+  position: relative;
+  top: -1em;
+  left : .2em;
 }
 
 
@@ -114,6 +130,9 @@ section {
   background-color: var(--YouTube);
 }
 
+.arrow {
+  margin:0 .5em;
+}
 
 
 .down-cards {
@@ -158,12 +177,17 @@ main.dark .top-cards, main.dark .down-cards  {
 
 @media (min-width:414px)  {
   .top-cards, .down-cards {
-    width: 360px;
+    width: 95%;
   }
 }
 
 
 @media (min-width:800px)  {
+
+  header {
+    padding: 2em 1.2em;
+  }
+
   .top-container{
     display: flex;
     flex-direction: row !important;
@@ -179,12 +203,69 @@ main.dark .top-cards, main.dark .down-cards  {
 
 
   .top-cards {
-    margin: 1em .5em;
+    margin: 1em .7em;
   }
 }
 
+@media (min-width:960px) {
+  header {
+     padding: 2em 1.5em;
+   }
 
-@media (min-width:1200px) {
+  .top-cards {
+    width: 430px;
+    height: 225px;
+    margin: 1em;
+    
+    margin: 1em .5em;
+  }
+
+  
+
+
+  .down-container {
+    gap: 25px;
+    padding: 0 .5em;
+  }
+
+  .sub-title {
+    position: relative;
+    top: -1em;
+    left : .5em;
+  }
+
+  
+  .down-cards {
+    width: 440px;
+    height: 130px;
+    border-radius: 7px;
+  }
+}
+
+@media (min-width:1024px) {
+  .top-cards {
+    margin: 1em 1.7em;
+    width: 440px;
+  }
+
+  .down-container {
+    gap: 25px;
+    padding: 0 1em;
+  }
+
+  .down-cards {
+    width: 445px;
+    height: 150px;
+  }
+  
+}
+
+@media (min-width:1280px) {
+
+  header {
+    padding: 2em .5em;
+  }
+
   .top-container{
     margin-left: -1em;
     flex-wrap: nowrap;
@@ -194,7 +275,7 @@ main.dark .top-cards, main.dark .down-cards  {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr ;
-    gap: 25px;
+    gap: 17px;
   }
 
   .sub-title {
@@ -209,9 +290,21 @@ main.dark .top-cards, main.dark .down-cards  {
   }
   
   .down-cards {
-    width: 275px;
+    width: 255px;
     height: 130px;
     border-radius: 7px;
+  }
+}
+
+@media (min-width:1440px) {
+   
+  .down-cards {
+    width: 290px;
+    height: 150px;
+  }
+
+  .top-cards {
+    margin: 1em ;
   }
 }
 
