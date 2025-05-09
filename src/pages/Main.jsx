@@ -1,16 +1,11 @@
 import {Stack,Typography,Switch} from '@mui/material'
-import { useState } from 'react'
 import { styled } from '@mui/material/styles';
 import UpData from '../components/UpData'
 import DownData from '../components/DownData'
+import useSwitch from './hooks/useSwitch';
 export default function MainPage() {
 
-    const [checked, setChecked] = useState(false)
-
-    const handleChange = (e) => {
-        setChecked(e.target.checked)
-        console.log(checked)
-    }
+    const {checked, handleChange}  = useSwitch()
 
 
 
@@ -18,7 +13,7 @@ export default function MainPage() {
       <Switch focusVisibleClassName=".Mui-focusVisible" 
       checked={checked}
        onChange={handleChange} disableRipple {...props} />
-    ))(({ theme }) => ({
+    ))(() => ({
       width: 58,
       height: 34,
       padding: 7,
